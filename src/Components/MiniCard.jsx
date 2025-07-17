@@ -51,7 +51,7 @@ function MiniCard({ time, temp, iconString }) {
   }, [iconString]);
   return (
     <div className="glassCard md:w-[10rem] sm:w-[9rem] h-[10rem] p-4 flex flex-col">
-      <p className="text-center bg-[#9b9a9a]">
+      <p className="text-center bg-[#9b9a9a] sm:text-[13px] md:text-[15px]">
         {
           new Date(time)
             .toLocaleDateString("en", options)

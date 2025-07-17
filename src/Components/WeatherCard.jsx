@@ -65,8 +65,8 @@ function WeatherCard({
             {location}
         </div> :""}
         {conditions?   <div className='w-full flex items-center justify-between mt-4'>
-          <p className='flex-1 text-center p-2 '>{new Date().toDateString()}</p>
-          <p className='flex-1 text-center p-2 '>{time}</p>
+          <p className='flex-1 text-center p-2 sm:text-[15px] md:text-[15px]'>{new Date().toDateString()}</p>
+          <p className='flex-1 text-center p-2 sm:text-[15px] md:text-[15px]'>{time}</p>
 
         </div>
          :""}
