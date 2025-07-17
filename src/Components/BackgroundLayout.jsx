@@ -22,7 +22,7 @@ function BackgroundLayout() {
         if(imageString?.toLowerCase().includes('clear')){
             setimage(Clear)
         }
-        else if(imageString?.toLowerCase().includes('Cloudy')){
+        else if(imageString?.toLowerCase().includes('cloudy')){
             setimage(Cloudy)
         }
         else if(imageString?.toLowerCase().includes('fog')){
