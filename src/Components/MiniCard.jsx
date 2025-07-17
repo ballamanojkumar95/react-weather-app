@@ -12,7 +12,12 @@ import overcast from "../../public/icons/overcast-64.png"
 
 function MiniCard({ time, temp, iconString }) {
   const [icon, setIcon] = useState();
-
+  var options = {
+  weekday: "short",
+  year: "numeric",
+  month: "2-digit",
+  day: "numeric"
+};
   useEffect(() => {
     if (iconString) {
       if (iconString?.toLowerCase().includes("clear")) {
@@ -45,12 +50,11 @@ function MiniCard({ time, temp, iconString }) {
     }
   }, [iconString]);
   return (
-    <div className="glassCard w-[10rem] h-[10rem] p-4 flex flex-col">
-      <p className="text-center">
+    <div className="glassCard md:w-[10rem] sm:w-[9rem] h-[10rem] p-4 flex flex-col">
+      <p className="text-center bg-[#9b9a9a]">
         {
           new Date(time)
-            .toLocaleDateString("en", { weekday: "long" })
-            .split(" ")[0]
+            .toLocaleDateString("en", options)
         }
       </p>
       <hr />
